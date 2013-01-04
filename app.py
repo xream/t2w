@@ -30,7 +30,7 @@ class Weibo(object):
 
     def get_token(self):
         url = self.client.get_authorize_url()
-        code = raw_input(('\n').join(('open the url in your brower:', url, 'input the code:', '> ')))
+        code = raw_input(('\n').join(('open the url in your browser:', url, 'input the code:', '> ')))
         r = self.client.request_access_token(code)
         self.access_token = r.access_token
         self.expires_in = r.expires_in
